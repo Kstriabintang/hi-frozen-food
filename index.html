@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi Frozen Food | Frozen Food Segar, Harga Bersahabat — Pontianak</title>
+  <meta name="description" content="Hi Frozen Food Pontianak — Frozen food premium segar berkualitas, harga bersahabat. Order via WhatsApp, bayar QRIS atau COD. Buka setiap hari 08.00-20.00 WIB.">
+  <meta name="keywords" content="frozen food pontianak, frozen food murah, nugget pontianak, kebab frozen, sosis, dimsum, order whatsapp">
+  <meta property="og:title" content="Hi Frozen Food Pontianak">
+  <meta property="og:description" content="Frozen Food Premium untuk Keluarga Anda — Segar, Berkualitas, Harga Bersahabat">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://hifrozenfood.github.io">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❄️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/products.css">
+  <link rel="stylesheet" href="assets/css/howto.css">
+  <link rel="stylesheet" href="assets/css/testimonial.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+
+</head>
+
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-logo"><img src="assets/images/logo.png" alt="Hi Frozen Food"></div>
+    <div class="loading-bar-track">
+      <div class="loading-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero" onclick="closeMobileMenu()">Beranda</a>
+    <a href="#produk" onclick="closeMobileMenu()">Produk</a>
+    <a href="#caraorder" onclick="closeMobileMenu()">Cara Order</a>
+    <a href="#testimoni" onclick="closeMobileMenu()">Testimoni</a>
+    <a href="#kontak" onclick="closeMobileMenu()">Kontak</a>
+    <a class="nav-cta" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan" target="_blank" onclick="closeMobileMenu()">Order Sekarang</a>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo"><img src="assets/images/logo.png" alt="Hi Frozen Food"></a>
+      <ul class="nav-menu">
+        <li><a href="#hero" class="active">Beranda</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#caraorder">Cara Order</a></li>
+        <li><a href="#testimoni">Testimoni</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+      <a class="nav-cta" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan" target="_blank">Order Sekarang</a>
+      <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <!-- Snowflakes -->
+    <svg class="snowflake-decor top-right" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 0v100M0 50h100M14.6 14.6l70.7 70.7M85.3 14.6L14.6 85.3" stroke="#FFD600" stroke-width="1"/>
+      <path d="M25 6.7l25 43.3M75 6.7L50 50M93.3 25L50 50M93.3 75L50 50M75 93.3L50 50M25 93.3l25-43.3M6.7 75l43.3-25M6.7 25l43.3 25" stroke="#FFD600" stroke-width="0.5"/>
+      <circle cx="50" cy="50" r="8" stroke="#FFD600" stroke-width="1"/>
+    </svg>
+    <svg class="snowflake-decor bottom-left" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 0v100M0 50h100M14.6 14.6l70.7 70.7M85.3 14.6L14.6 85.3" stroke="#FFD600" stroke-width="1"/>
+      <path d="M25 6.7l25 43.3M75 6.7L50 50M93.3 25L50 50M93.3 75L50 50M75 93.3L50 50M25 93.3l25-43.3M6.7 75l43.3-25M6.7 25l43.3 25" stroke="#FFD600" stroke-width="0.5"/>
+      <circle cx="50" cy="50" r="8" stroke="#FFD600" stroke-width="1"/>
+    </svg>
+
+    <!-- Particles -->
+    <div class="particles-container" id="particles"></div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="hero-badge">🏪 Pontianak's Trusted Frozen Food</div>
+      <h1>Frozen Food Premium untuk Keluarga Anda</h1>
+      <p class="hero-sub" id="heroTagline">Frozen Food Segar, Harga Bersahabat</p>
+      <p class="hero-sub2">KUALITAS TERJAGA, RASA JUARA</p>
+      <div class="hero-buttons">
+        <a class="btn-primary" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan" target="_blank">💬 Order via WhatsApp</a>
+        <a class="btn-secondary" href="#produk">📋 Lihat Produk</a>
+      </div>
+    </div>
+
+    <!-- Hero Stats -->
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-number" data-target="500">0</span><span class="hero-stat-number hero-stat-suffix">+</span>
+        <div class="hero-stat-label">Customer</div>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number" data-target="29">0</span><span class="hero-stat-number hero-stat-suffix">+</span>
+        <div class="hero-stat-label">Produk</div>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number hero-stat-icon">⭐ </span><span class="hero-stat-number" data-target="5" data-decimal="true">0</span>
+        <div class="hero-stat-label">Rating</div>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number" data-target="2">0</span><span class="hero-stat-number hero-stat-suffix">th</span>
+        <div class="hero-stat-label">Berdiri</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Marquee -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-item">❄️ Stok Selalu Fresh</span>
+      <span class="marquee-item">•</span>
+      <span class="marquee-item">🚀 Order via WhatsApp</span>
+      <span class="marquee-item">•</span>
+      <span class="marquee-item">💳 QRIS & COD</span>
+      <span class="marquee-item">•</span>
+      <span class="marquee-item">📍 Pontianak Barat</span>
+      <span class="marquee-item">•</span>
+      <span class="marquee-item">⏰ Buka 08.00-20.00</span>
+      <span class="marquee-item">•</span>
+      <span class="marquee-item">⭐ Rating 5.0</span>
+      <span class="marquee-item">•</span>
+      <span class="marquee-item">❄️ Stok Selalu Fresh</span>
+      <span class="marquee-item">•</span>
+      <span class="marquee-item">🚀 Order via WhatsApp</span>
+      <span class="marquee-item">•</span>
+      <span class="marquee-item">💳 QRIS & COD</span>
+      <span class="marquee-item">•</span>
+      <span class="marquee-item">📍 Pontianak Barat</span>
+      <span class="marquee-item">•</span>
+      <span class="marquee-item">⏰ Buka 08.00-20.00</span>
+      <span class="marquee-item">•</span>
+      <span class="marquee-item">⭐ Rating 5.0</span>
+      <span class="marquee-item">•</span>
+    </div>
+  </div>
+
+  <!-- Stats / Social Proof -->
+  <section class="stats-section" id="stats">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <span class="stat-number" data-target="500">0</span>
+        <div class="stat-label">Customer Puas</div>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number" data-target="29">0</span>
+        <div class="stat-label">Produk Tersedia</div>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number stat-star">⭐ </span><span class="stat-number stat-inline" data-target="5" data-decimal="true">0</span>
+        <div class="stat-label">Rating Google</div>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-number" data-target="2">0</span>
+        <div class="stat-label">Tahun Berdiri</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang Kami -->
+  <section class="about-section" id="tentang">
+    <div class="container">
+      <div class="about-visual">
+        <div class="about-card-float card-1 reveal">
+          <img src="assets/images/1.png" alt="Harvest Shoestring Fries" loading="lazy">
+        </div>
+        <div class="about-card-float card-2 reveal">
+          <img src="assets/images/4.png" alt="Kebab Mini" loading="lazy">
+        </div>
+        <div class="about-card-float card-3 reveal">
+          <img src="assets/images/14.png" alt="Ayam Fillet" loading="lazy">
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <span class="section-label">Tentang Kami</span>
+        <h2>Kami Hadir untuk Keluarga Pontianak</h2>
+        <p>Hi Frozen Food berdiri dengan misi sederhana — menyediakan frozen food berkualitas dengan harga yang bersahabat untuk seluruh keluarga di Pontianak. Setiap produk kami dipilih dengan cermat untuk memastikan kesegaran dan cita rasa terbaik.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon">❄️</div>
+            <div>
+              <h4>Produk Segar & Berkualitas</h4>
+              <p>Semua produk disimpan dalam kondisi beku sempurna</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">🚀</div>
+            <div>
+              <h4>Order Mudah via WhatsApp</h4>
+              <p>Cukup chat, pilih produk, dan bayar — selesai!</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">💳</div>
+            <div>
+              <h4>QRIS & COD Tersedia</h4>
+              <p>Bayar online atau tunai di tempat, sesuai kenyamanan</p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <a class="btn-primary" href="#produk">Pelajari Lebih Lanjut</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produk Kami -->
+  <section class="products-section" id="produk">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Produk Pilihan</span>
+        <h2>29+ Produk Frozen Food Terbaik</h2>
+        <p class="section-sub">Pilih dari berbagai kategori produk unggulan kami</p>
+      </div>
+
+      <div class="filter-tabs reveal">
+        <button class="filter-tab active" data-filter="all">Semua</button>
+        <button class="filter-tab" data-filter="nugget">Nugget</button>
+        <button class="filter-tab" data-filter="ayam">Ayam</button>
+        <button class="filter-tab" data-filter="kentang">Kentang</button>
+        <button class="filter-tab" data-filter="kebab">Kebab</button>
+        <button class="filter-tab" data-filter="bakso">Bakso</button>
+        <button class="filter-tab" data-filter="dimsum">Dimsum</button>
+        <button class="filter-tab" data-filter="roti">Roti</button>
+        <button class="filter-tab" data-filter="seafood">Seafood</button>
+        <button class="filter-tab" data-filter="snack">Snack</button>
+        <button class="filter-tab" data-filter="patties">Patties</button>
+        <button class="filter-tab" data-filter="sosis">Sosis</button>
+        <button class="filter-tab" data-filter="featured">Featured</button>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <div class="product-row" id="productRow1">
+        <!-- Product 1 -->
+        <div class="product-card reveal" data-category="kentang">
+          <div class="product-image-wrap">
+            <img src="assets/images/1.png" alt="Harvest Shoestring Fries" loading="lazy">
+            <span class="product-badge">Kentang</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Harvest%20Shoestring%20Fries" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Harvest Shoestring Fries</div>
+          <div class="product-price">Rp 37.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Harvest%20Shoestring%20Fries" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card reveal" data-category="kebab">
+          <div class="product-image-wrap">
+            <img src="assets/images/4.png" alt="Kebab Mini Daging Sapi" loading="lazy">
+            <span class="product-badge">Kebab</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Kebab%20Mini%20Daging%20Sapi" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Kebab Mini Daging Sapi</div>
+          <div class="product-price">Rp 35.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Kebab%20Mini%20Daging%20Sapi" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card reveal" data-category="bakso">
+          <div class="product-image-wrap">
+            <img src="assets/images/13.png" alt="Bakso Frozen" loading="lazy">
+            <span class="product-badge">Bakso</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Bakso%20Frozen" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Bakso Frozen</div>
+          <div class="product-price">Rp 80.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Bakso%20Frozen" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card reveal" data-category="dimsum">
+          <div class="product-image-wrap">
+            <img src="assets/images/12.png" alt="Siomay Frozen" loading="lazy">
+            <span class="product-badge">Dimsum</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Siomay%20Frozen" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Siomay Frozen</div>
+          <div class="product-price">Rp 115.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Siomay%20Frozen" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card reveal" data-category="snack">
+          <div class="product-image-wrap">
+            <img src="assets/images/11.png" alt="Empek-Empek Frozen" loading="lazy">
+            <span class="product-badge">Snack</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Empek-Empek%20Frozen" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Empek-Empek Frozen</div>
+          <div class="product-price">Rp 55.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Empek-Empek%20Frozen" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card reveal" data-category="roti">
+          <div class="product-image-wrap">
+            <img src="assets/images/9.png" alt="Roti Burger Full Wijen" loading="lazy">
+            <span class="product-badge">Roti</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Roti%20Burger%20Full%20Wijen" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Roti Burger Full Wijen</div>
+          <div class="product-price">Rp 1.800</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Roti%20Burger%20Full%20Wijen" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card reveal" data-category="roti">
+          <div class="product-image-wrap">
+            <img src="assets/images/8.png" alt="Roti Bandung" loading="lazy">
+            <span class="product-badge">Roti</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Roti%20Bandung" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Roti Bandung</div>
+          <div class="product-price">Rp 9.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Roti%20Bandung" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card reveal" data-category="dimsum">
+          <div class="product-image-wrap">
+            <img src="assets/images/7.png" alt="Akai Dimsum" loading="lazy">
+            <span class="product-badge">Dimsum</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Akai%20Dimsum" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Akai Dimsum</div>
+          <div class="product-price">Rp 23.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Akai%20Dimsum" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product-card reveal" data-category="kentang">
+          <div class="product-image-wrap">
+            <img src="assets/images/6.png" alt="Harvest Crinkle Cut" loading="lazy">
+            <span class="product-badge">Kentang</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Harvest%20Crinkle%20Cut" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Harvest Crinkle Cut</div>
+          <div class="product-price">Rp 38.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Harvest%20Crinkle%20Cut" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product-card reveal" data-category="patties">
+          <div class="product-image-wrap">
+            <div class="product-placeholder">🥩</div>
+            <span class="product-badge">Patties</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Jofrans%20Patties%20Daging%20Ayam" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Jofrans Patties Daging Ayam</div>
+          <div class="product-price">Rp 43.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Jofrans%20Patties%20Daging%20Ayam" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="product-card reveal" data-category="kentang">
+          <div class="product-image-wrap">
+            <img src="assets/images/24.png" alt="Kentang Crinkle 2.5 KG" loading="lazy">
+            <span class="product-badge">Kentang</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Kentang%20Crinkle%202.5%20KG" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Kentang Crinkle 2.5 KG</div>
+          <div class="product-price">Rp 90.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Kentang%20Crinkle%202.5%20KG" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="product-card reveal" data-category="nugget">
+          <div class="product-image-wrap">
+            <img src="assets/images/22.png" alt="Kanzler Crispy Nugget Spicy" loading="lazy">
+            <span class="product-badge">Nugget</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Kanzler%20Crispy%20Nugget%20Spicy" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Kanzler Crispy Nugget Spicy</div>
+          <div class="product-price">Rp 49.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Kanzler%20Crispy%20Nugget%20Spicy" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 13 -->
+        <div class="product-card reveal" data-category="sosis">
+          <div class="product-image-wrap">
+            <img src="assets/images/20.png" alt="Jofrans Sosis Ayam Mini Koktail" loading="lazy">
+            <span class="product-badge">Sosis</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Jofrans%20Sosis%20Ayam%20Mini%20Koktail" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Jofrans Sosis Ayam Mini Koktail</div>
+          <div class="product-price">Rp 17.400</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Jofrans%20Sosis%20Ayam%20Mini%20Koktail" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 14 -->
+        <div class="product-card reveal" data-category="nugget">
+          <div class="product-image-wrap">
+            <img src="assets/images/17.png" alt="Jofrans Original Chicken Nugget" loading="lazy">
+            <span class="product-badge">Nugget</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Jofrans%20Original%20Chicken%20Nugget" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Jofrans Original Chicken Nugget</div>
+          <div class="product-price">Rp 24.500</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Jofrans%20Original%20Chicken%20Nugget" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 15 -->
+        <div class="product-card reveal" data-category="nugget">
+          <div class="product-image-wrap">
+            <img src="assets/images/16.png" alt="Jofrans Crispy Chicken Nugget" loading="lazy">
+            <span class="product-badge">Nugget</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Jofrans%20Crispy%20Chicken%20Nugget" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Jofrans Crispy Chicken Nugget</div>
+          <div class="product-price">Rp 24.500</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Jofrans%20Crispy%20Chicken%20Nugget" target="_blank">💬 Pesan</a>
+        </div>
+        </div>
+        <div class="product-row" id="productRow2">
+        <!-- Product 16 -->
+        <div class="product-card reveal" data-category="ayam">
+          <div class="product-image-wrap">
+            <img src="assets/images/15.png" alt="Jofrans Spicy Wings" loading="lazy">
+            <span class="product-badge">Ayam</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Jofrans%20Spicy%20Wings" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Jofrans Spicy Wings 500 Gram</div>
+          <div class="product-price">Rp 49.500</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Jofrans%20Spicy%20Wings" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 17 -->
+        <div class="product-card reveal" data-category="ayam">
+          <div class="product-image-wrap">
+            <img src="assets/images/14.png" alt="Ayam Fillet CP Dada & Paha" loading="lazy">
+            <span class="product-badge">Ayam</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Ayam%20Fillet%20CP%20Dada%20%26%20Paha" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Ayam Fillet CP Dada & Paha</div>
+          <div class="product-price">Rp 45.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Ayam%20Fillet%20CP%20Dada%20%26%20Paha" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 18 -->
+        <div class="product-card reveal" data-category="nugget">
+          <div class="product-image-wrap">
+            <img src="assets/images/21.png" alt="Kanzler Chicken Nugget" loading="lazy">
+            <span class="product-badge">Nugget</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Kanzler%20Chicken%20Nugget" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Kanzler Chicken Nugget</div>
+          <div class="product-price">Rp 45.500</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Kanzler%20Chicken%20Nugget" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 19 -->
+        <div class="product-card reveal" data-category="nugget">
+          <div class="product-image-wrap">
+            <img src="assets/images/19.png" alt="Jofrans Nugget Ayam 225 Gram" loading="lazy">
+            <span class="product-badge">Nugget</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Jofrans%20Nugget%20Ayam%20225%20Gram" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Jofrans Nugget Ayam 225 Gram</div>
+          <div class="product-price">Rp 12.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Jofrans%20Nugget%20Ayam%20225%20Gram" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 20 -->
+        <div class="product-card reveal" data-category="featured">
+          <div class="product-image-wrap">
+            <div class="product-placeholder">🎁</div>
+            <span class="product-badge">Featured</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Hi%20Frozen%20Food%20Special%20Pack" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Hi Frozen Food Special Pack</div>
+          <div class="product-price">Rp 99.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Hi%20Frozen%20Food%20Special%20Pack" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 21 -->
+        <div class="product-card reveal" data-category="roti">
+          <div class="product-image-wrap">
+            <img src="assets/images/25.png" alt="Tortilaku Tortilla Mini 20 CM" loading="lazy">
+            <span class="product-badge">Roti</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Tortilaku%20Tortilla%20Mini%2020%20CM" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Tortilaku Tortilla Mini 20 CM</div>
+          <div class="product-price">Rp 36.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Tortilaku%20Tortilla%20Mini%2020%20CM" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 22 -->
+        <div class="product-card reveal" data-category="kentang">
+          <div class="product-image-wrap">
+            <img src="assets/images/5.png" alt="Kentang Shoestring 2.5 KG" loading="lazy">
+            <span class="product-badge">Kentang</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Kentang%20Shoestring%202.5%20KG" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Kentang Shoestring 2.5 KG</div>
+          <div class="product-price">Rp 87.500</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Kentang%20Shoestring%202.5%20KG" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 23 -->
+        <div class="product-card reveal" data-category="roti">
+          <div class="product-image-wrap">
+            <div class="product-placeholder">🌭</div>
+            <span class="product-badge">Roti</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Roti%20Panjang%20%2F%20Roti%20Hotdog" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Roti Panjang / Roti Hotdog</div>
+          <div class="product-price">Rp 1.800</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Roti%20Panjang%20%2F%20Roti%20Hotdog" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 24 -->
+        <div class="product-card reveal" data-category="roti">
+          <div class="product-image-wrap">
+            <img src="assets/images/28.png" alt="Roti Canai" loading="lazy">
+            <span class="product-badge">Roti</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Roti%20Canai" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Roti Canai</div>
+          <div class="product-price">Rp 15.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Roti%20Canai" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 25 -->
+        <div class="product-card reveal" data-category="roti">
+          <div class="product-image-wrap">
+            <img src="assets/images/27.png" alt="Tortilaku Tortilla Besar 25 CM" loading="lazy">
+            <span class="product-badge">Roti</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Tortilaku%20Tortilla%20Besar%2025%20CM" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Tortilaku Tortilla Besar 25 CM</div>
+          <div class="product-price">Rp 45.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Tortilaku%20Tortilla%20Besar%2025%20CM" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 26 -->
+        <div class="product-card reveal" data-category="seafood">
+          <div class="product-image-wrap">
+            <img src="assets/images/26.png" alt="Cadera Ebi Furai" loading="lazy">
+            <span class="product-badge">Seafood</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Cadera%20Ebi%20Furai" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Cadera Ebi Furai</div>
+          <div class="product-price">Rp 45.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Cadera%20Ebi%20Furai" target="_blank">💬 Pesan</a>
+        </div>
+        <!-- Product 27 -->
+        <div class="product-card reveal" data-category="kebab">
+          <div class="product-image-wrap">
+            <div class="product-placeholder">🌯</div>
+            <span class="product-badge">Kebab</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Kebab%20Ayam" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Kebab Ayam</div>
+          <div class="product-price">Rp 30.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Kebab%20Ayam" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 28 -->
+        <div class="product-card reveal" data-category="patties">
+          <div class="product-image-wrap">
+            <div class="product-placeholder">🥩</div>
+            <span class="product-badge">Patties</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Jofrans%20Patties%20Daging%20Sapi" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Jofrans Patties Daging Sapi</div>
+          <div class="product-price">Rp 51.000</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Jofrans%20Patties%20Daging%20Sapi" target="_blank">💬 Pesan</a>
+        </div>
+
+        <!-- Product 29 -->
+        <div class="product-card reveal" data-category="snack">
+          <div class="product-image-wrap">
+            <div class="product-placeholder">🥮</div>
+            <span class="product-badge">Snack</span>
+            <div class="product-overlay">
+              <a class="product-overlay-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Risol%20Mayo" target="_blank">Pesan Sekarang</a>
+            </div>
+          </div>
+          <div class="product-name">Risol Mayo</div>
+          <div class="product-price">Rp 3.500</div>
+          <a class="product-btn" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan%20Risol%20Mayo" target="_blank">💬 Pesan</a>
+        </div>
+        </div>
+      </div>
+      <div class="product-nav">
+        <button class="product-nav-btn" id="productNavPrev" aria-label="Produk sebelumnya">&#10094;</button>
+        <button class="product-nav-btn" id="productNavNext" aria-label="Produk berikutnya">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cara Order -->
+  <section class="order-section" id="caraorder">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Cara Order</span>
+        <h2>Cara Order Mudah</h2>
+      </div>
+      <div class="order-timeline">
+        <div class="order-step reveal">
+          <div class="order-step-num">1</div>
+          <div class="order-step-card">
+            <span class="icon">💬</span>
+            <h4>Chat WhatsApp</h4>
+            <p>Hubungi kami langsung via WhatsApp kapan saja</p>
+          </div>
+        </div>
+        <div class="order-step reveal">
+          <div class="order-step-num">2</div>
+          <div class="order-step-card">
+            <span class="icon">📋</span>
+            <h4>Pilih Produk</h4>
+            <p>Pilih dari 29+ produk frozen food pilihan kami</p>
+          </div>
+        </div>
+        <div class="order-step reveal">
+          <div class="order-step-num">3</div>
+          <div class="order-step-card">
+            <span class="icon">💳</span>
+            <h4>Bayar Mudah</h4>
+            <p>QRIS otomatis dikirim bot, atau pilih COD</p>
+          </div>
+        </div>
+        <div class="order-step reveal">
+          <div class="order-step-num">4</div>
+          <div class="order-step-card">
+            <span class="icon">📦</span>
+            <h4>Pesanan Siap!</h4>
+            <p>Ambil di toko atau kami siapkan untuk pengiriman</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section class="testi-section" id="testimoni">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Testimoni</span>
+        <h2>Kata Mereka</h2>
+      </div>
+      <div class="testi-carousel" id="testiCarousel">
+        <div class="testi-track" id="testiTrack">
+          <!-- Testimonial 1 -->
+          <div class="testi-card">
+            <div class="testi-card-inner">
+              <div class="testi-header">
+                <div class="testi-avatar testi-avatar-1">S</div>
+                <div>
+                  <div class="testi-name">Sari R.</div>
+                  <div class="testi-location">Pontianak</div>
+                </div>
+              </div>
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+              <div class="testi-text">"Nuggetnya fresh banget, anak-anak langsung suka! Order via WA gampang, bayar QRIS langsung selesai."</div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="testi-card">
+            <div class="testi-card-inner">
+              <div class="testi-header">
+                <div class="testi-avatar testi-avatar-2">B</div>
+                <div>
+                  <div class="testi-name">Budi S.</div>
+                  <div class="testi-location">Pontianak Barat</div>
+                </div>
+              </div>
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+              <div class="testi-text">"Stok selalu lengkap, harga bersaing. Udah jadi langganan tetap di sini buat kebutuhan frozen food."</div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="testi-card">
+            <div class="testi-card-inner">
+              <div class="testi-header">
+                <div class="testi-avatar testi-avatar-3">D</div>
+                <div>
+                  <div class="testi-name">Dewi A.</div>
+                  <div class="testi-location">Siantan</div>
+                </div>
+              </div>
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+              <div class="testi-text">"Praktis banget! QR langsung dikirim di chat WA, tinggal scan dan bayar. Recommended!"</div>
+            </div>
+          </div>
+          <!-- Testimonial 4 -->
+          <div class="testi-card">
+            <div class="testi-card-inner">
+              <div class="testi-header">
+                <div class="testi-avatar testi-avatar-4">R</div>
+                <div>
+                  <div class="testi-name">Rina M.</div>
+                  <div class="testi-location">Pontianak Utara</div>
+                </div>
+              </div>
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+              <div class="testi-text">"Kebabnya enak banget! Beli tiap minggu buat stok di rumah. Harga worth it sama kualitasnya."</div>
+            </div>
+          </div>
+          <!-- Testimonial 5 -->
+          <div class="testi-card">
+            <div class="testi-card-inner">
+              <div class="testi-header">
+                <div class="testi-avatar testi-avatar-5">H</div>
+                <div>
+                  <div class="testi-name">Hendra K.</div>
+                  <div class="testi-location">Pontianak Selatan</div>
+                </div>
+              </div>
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+              <div class="testi-text">"Respon WAnya cepet, langsung dibalas dan langsung diproses. Frozen food terlengkap di Pontianak!"</div>
+            </div>
+          </div>
+          <!-- Testimonial 6 -->
+          <div class="testi-card">
+            <div class="testi-card-inner">
+              <div class="testi-header">
+                <div class="testi-avatar testi-avatar-6">M</div>
+                <div>
+                  <div class="testi-name">Maya L.</div>
+                  <div class="testi-location">Pontianak Kota</div>
+                </div>
+              </div>
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+              <div class="testi-text">"Produknya lengkap dari nugget sampe roti. Satu stop shopping frozen food!"</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-nav">
+          <button class="testi-arrow" id="testiPrev">&#10094;</button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button class="testi-arrow" id="testiNext">&#10095;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lokasi & Kontak -->
+  <section class="contact-section" id="kontak">
+    <div class="container">
+      <div class="contact-info-card reveal">
+        <h3>Hubungi Kami</h3>
+        <div class="contact-item">
+          <span class="icon">📍</span>
+          <div>
+            <h4>Lokasi</h4>
+            <p>Sui Jawi, Gg. Lawu, Kec. Pontianak Barat, Kota Pontianak, Kalimantan Barat</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="icon">🕐</span>
+          <div>
+            <h4>Jam Operasional</h4>
+            <p>Senin – Minggu, 08.00 – 20.00 WIB</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📱</span>
+          <div>
+            <h4>WhatsApp</h4>
+            <p>+62 852-4558-5908</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="icon">💳</span>
+          <div>
+            <h4>Pembayaran</h4>
+            <div>
+              <span class="payment-badge">✓ QRIS</span>
+              <span class="payment-badge">✓ COD</span>
+              <span class="payment-badge">✓ Tunai</span>
+            </div>
+          </div>
+        </div>
+        <a class="btn-primary" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan" target="_blank">💬 Chat Sekarang</a>
+      </div>
+      <div class="contact-map reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15958.584188763215!2d109.2997224!3d-0.0555556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d59e22eF9e5c5%3A0x4c2b5b1b1b1b1b1b!2sSui%20Jawi%2C%20Pontianak%20Barat!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Akhir -->
+  <section class="cta-section">
+    <div class="container reveal">
+      <div class="cta-icon">❄️</div>
+      <h2>Siap Memesan Sekarang?</h2>
+      <p>Chat langsung — respon cepat, proses mudah!</p>
+      <a class="btn-primary" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan" target="_blank">💬 Order via WhatsApp</a>
+      <p class="cta-note">Buka setiap hari 08.00 – 20.00 WIB</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><img src="assets/images/logo.png" alt="Hi Frozen Food" loading="lazy"></div>
+          <p class="footer-tagline">Frozen Food Segar, Harga Bersahabat</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigasi</h4>
+          <a href="#hero">Beranda</a>
+          <a href="#produk">Produk</a>
+          <a href="#caraorder">Cara Order</a>
+          <a href="#testimoni">Testimoni</a>
+          <a href="#kontak">Kontak</a>
+        </div>
+        <div class="footer-social-col">
+          <h4>Ikuti Kami</h4>
+          <div class="footer-social">
+            <a href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!" target="_blank" title="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="#" title="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Hi Frozen Food. All rights reserved.</p>
+        <p>Made with ❤️ in Pontianak</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="float-wa" href="https://wa.me/6285245585908?text=Halo%20Hi%20Frozen%20Food!%20Saya%20mau%20pesan" target="_blank">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="float-wa-tooltip">Chat Sekarang!</span>
+  </a>
+
+  <!-- Scroll to Top -->
+  <button class="float-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/hero.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/testimonial.js"></script>
+
+</body>
+</html>

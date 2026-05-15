@@ -1,0 +1,124 @@
+/* ================================================================
+       ROOT VARIABLES
+       ================================================================ */
+    :root {
+      --bg-body: #1A1200;
+      --bg-hero: linear-gradient(135deg, #1A1200 0%, #0D0800 50%, #1A1200 100%);
+      --bg-card: rgba(255, 214, 0, 0.05);
+      --bg-footer: #0D0800;
+      --bg-stats: rgba(255, 214, 0, 0.03);
+
+      --primary: #FFD600;
+      --secondary: #FF6B00;
+      --accent: #2E7D32;
+
+      --gradient-text: linear-gradient(135deg, #FFD600, #FF8C00);
+      --gradient-btn: linear-gradient(135deg, #FFD600, #FF6B00);
+      --gradient-hero-bg: linear-gradient(135deg, #1A1200, #0D0800);
+
+      --border-glass: 1px solid rgba(255, 214, 0, 0.15);
+      --border-glass-hover: 1px solid rgba(255, 214, 0, 0.5);
+      --shadow-glow: 0 0 20px rgba(255, 214, 0, 0.2);
+
+      --white: #FFFFFF;
+      --text-muted: rgba(255, 255, 255, 0.6);
+
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --radius: 16px;
+      --transition: all 0.3s ease;
+    }
+
+/* ================================================================
+       RESET & BASE
+       ================================================================ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    .product-card, .btn-primary, .testi-card-inner, .float-wa, .float-top, .navbar {
+      will-change: transform;
+    }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-body);
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    body.loaded { opacity: 1; }
+
+    .gradient-text {
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+/* ================================================================
+       SCROLL PROGRESS BAR
+       ================================================================ */
+    .scroll-progress {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: var(--gradient-btn);
+      transform-origin: left;
+      transform: scaleX(0);
+      z-index: 10000;
+    }
+
+/* ================================================================
+       SCROLL REVEAL
+       ================================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .product-grid .product-card.reveal { transition-delay: calc(var(--stagger, 0) * 0.1s); }
+
+    .section-header.reveal h2 {
+      clip-path: inset(0 100% 0 0);
+      transition: clip-path 0.6s ease-out;
+    }
+    .section-header.reveal.revealed h2 {
+      clip-path: inset(0 0 0 0);
+    }
+
+/* ================================================================
+       RESPONSIVE
+       ================================================================ */
+    @media (max-width: 1024px) {
+      .product-card { flex: 0 0 180px; }
+      .product-image-wrap { height: 155px; }
+      .testi-card { flex: 0 0 50%; }
+    }
+    @media (max-width: 768px) {
+      .nav-menu { display: none; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .about-section .container { grid-template-columns: 1fr; }
+      .about-visual { display: none; }
+      .product-card { flex: 0 0 160px; }
+      .product-image-wrap { height: 140px; }
+      .product-name { font-size: 12px; }
+      .product-price { font-size: 12px; }
+      .product-btn { font-size: 11px; height: 30px; padding: 6px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-stats { gap: 24px; }
+      .order-timeline { flex-direction: column; }
+      .order-timeline::before { display: none; }
+      .contact-section .container { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+      .footer-social { justify-content: center; }
+      .testi-card { flex: 0 0 100%; }
+      .filter-tabs { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px; }
+    }
+    @media (min-width: 769px) {
+      .mobile-menu { display: none !important; }
+    }
