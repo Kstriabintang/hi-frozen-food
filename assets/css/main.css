@@ -105,6 +105,9 @@
     @media (max-width: 768px) {
       /* ── Global overflow ─────────────────────────────────────── */
       *, section, div { max-width: 100%; }
+      /* Marquee perlu width: max-content agar gambar tampil penuh */
+      .marquee-row, .marquee-row--left, .marquee-row--right { max-width: none !important; }
+      .product-card-mini { max-width: 200px !important; flex-shrink: 0; }
       section { overflow-x: hidden; width: 100%; }
       .container { padding-left: 16px !important; padding-right: 16px !important; }
 
