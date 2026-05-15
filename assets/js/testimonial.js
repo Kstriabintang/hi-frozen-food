@@ -7,7 +7,8 @@
       const dotsContainer = document.getElementById('testiDots');
       const prevBtn = document.getElementById('testiPrev');
       const nextBtn = document.getElementById('testiNext');
-      
+      const testiNav = prevBtn.closest('.testi-nav');
+
       let currentSlide = 0;
       let slidesPerView = 3;
       let autoplayInterval;
@@ -16,6 +17,37 @@
         if (window.innerWidth < 640) return 1;
         if (window.innerWidth < 1024) return 2;
         return 3;
+      }
+
+      function isMobile() { return window.innerWidth <= 768; }
+
+      // ── Mobile stack: semua card vertikal, no carousel ──────────
+      function setupMobileStack() {
+        clearInterval(autoplayInterval);
+        track.style.flexDirection = 'column';
+        track.style.transform = 'none';
+        track.style.transition = 'none';
+        cards.forEach(c => {
+          c.style.flex = '1 1 100%';
+          c.style.maxWidth = '100%';
+        });
+        testiNav.style.display = 'none';
+      }
+
+      // ── Desktop carousel: reset ke mode normal ──────────────────
+      function setupDesktopCarousel() {
+        track.style.flexDirection = '';
+        track.style.transform = '';
+        track.style.transition = '';
+        cards.forEach(c => {
+          c.style.flex = '';
+          c.style.maxWidth = '';
+        });
+        testiNav.style.display = '';
+        slidesPerView = getSlidesPerView();
+        createDots();
+        goToSlide(0);
+        startAutoplay();
       }
 
       function createDots() {
@@ -33,11 +65,8 @@
         slidesPerView = getSlidesPerView();
         const maxSlide = Math.ceil(cards.length / slidesPerView) - 1;
         currentSlide = Math.max(0, Math.min(index, maxSlide));
-        const offset = currentSlide * (100 / slidesPerView) * slidesPerView;
-        // Adjust for the actual slide width
         const cardWidth = 100 / slidesPerView;
         track.style.transform = `translateX(-${currentSlide * cardWidth * slidesPerView}%)`;
-        
         document.querySelectorAll('.testi-dot').forEach((d, i) => {
           d.classList.toggle('active', i === currentSlide);
         });
@@ -62,23 +91,22 @@
         clearInterval(autoplayInterval);
       }
 
+      function handleLayout() {
+        if (isMobile()) setupMobileStack();
+        else setupDesktopCarousel();
+      }
+
       prevBtn.addEventListener('click', () => { prevSlide(); stopAutoplay(); startAutoplay(); });
       nextBtn.addEventListener('click', () => { nextSlide(); stopAutoplay(); startAutoplay(); });
-      
+
       const carousel = document.getElementById('testiCarousel');
       carousel.addEventListener('mouseenter', stopAutoplay);
       carousel.addEventListener('mouseleave', startAutoplay);
 
-      window.addEventListener('resize', () => {
-        slidesPerView = getSlidesPerView();
-        createDots();
-        goToSlide(0);
-      });
+      window.addEventListener('resize', handleLayout);
 
-      slidesPerView = getSlidesPerView();
-      createDots();
-      goToSlide(0);
-      startAutoplay();
+      // Init
+      handleLayout();
     })();
 
 // ================================================================
