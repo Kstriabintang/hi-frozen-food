@@ -26,7 +26,6 @@
     setTimeout(() => {
       const ls = document.getElementById('loadingScreen');
       if (ls) ls.classList.add('hidden');
-      document.body.classList.add('loaded');
     }, 1600);
 
 // ================================================================
