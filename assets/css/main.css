@@ -103,62 +103,51 @@
       .testi-card { flex: 0 0 50%; }
     }
     @media (max-width: 768px) {
-      /* Overflow global */
+      /* ── Global overflow ─────────────────────────────────────── */
       *, section, div { max-width: 100%; }
       section { overflow-x: hidden; width: 100%; }
       .container { padding-left: 16px !important; padding-right: 16px !important; }
 
-      /* Navbar */
+      /* ── Navbar ─────────────────────────────────────────────── */
       .nav-menu { display: none; }
       .nav-cta { display: none; }
       .hamburger { display: flex; }
 
-      /* About */
-      .about-section .container { grid-template-columns: 1fr; }
-      .about-visual { display: none; }
-      .about-feature { align-items: flex-start; width: 100%; }
-      .about-feature p { word-break: normal; overflow-wrap: break-word; }
-
-      /* Heading sizes */
+      /* ── Heading global ─────────────────────────────────────── */
       h1 { font-size: clamp(1.8rem, 6vw, 2.4rem) !important; }
       h2 { font-size: clamp(1.6rem, 5vw, 2rem) !important; }
-      .about-section h2 { font-size: 1.8rem !important; }
       .products-section h2 { font-size: 1.6rem !important; }
 
-      /* Stats */
+      /* ── Stats ──────────────────────────────────────────────── */
       .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
       .hero-stats { gap: 24px; }
 
-      /* Order timeline */
+      /* ── Order timeline ─────────────────────────────────────── */
       .order-timeline { flex-direction: column; }
       .order-timeline::before { display: none; }
 
-      /* Contact */
+      /* ── Contact ────────────────────────────────────────────── */
       .contact-section .container { grid-template-columns: 1fr; }
 
-      /* Footer */
+      /* ── Footer ─────────────────────────────────────────────── */
       .footer-grid { grid-template-columns: 1fr; text-align: center; }
       .footer-social { justify-content: center; }
 
-      /* Testimonial */
+      /* ── Testimonial ────────────────────────────────────────── */
       .testi-card { flex: 0 0 100%; }
 
-      /* Products (legacy) */
-      .product-card { flex: 0 0 160px; }
-      .product-image-wrap { height: 140px; }
-      .product-name { font-size: 12px; }
-      .product-price { font-size: 12px; }
-      .product-btn { font-size: 11px; height: 30px; padding: 6px; }
-      .filter-tabs { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px; }
-
-      /* Produk — kurangi animasi di mobile */
-      .product-card { transition: transform 0.2s ease; }
+      /* ── Animasi: matikan di mobile ─────────────────────────── */
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .product-card { transition: none !important; will-change: auto !important; }
       .product-card:hover { transform: none; }
-      .product-card-mini { transition: transform 0.2s ease; }
+      .product-card-mini { transition: none !important; }
       .product-card-mini:hover { transform: none; box-shadow: none; }
-      .reveal { transition: opacity 0.4s ease, transform 0.4s ease; }
 
-      /* Buttons CTA */
+      /* ── Buttons CTA ────────────────────────────────────────── */
       .btn-primary, .btn-secondary {
         white-space: nowrap;
         font-size: 0.95rem;
@@ -166,25 +155,15 @@
         width: auto;
         max-width: 90%;
       }
-      .about-content .btn-primary {
-        white-space: nowrap;
-        padding: 12px 20px;
-        font-size: 0.9rem;
-      }
     }
 
     @media (max-width: 480px) {
-      /* Stats compact di layar kecil */
+      /* ── Stats compact ──────────────────────────────────────── */
       .stat-item .stat-number,
       .hero-stat .hero-stat-number { font-size: 2rem; }
       .stats-grid { gap: 12px; padding: 0 8px; }
       .stat-item .stat-label { font-size: 0.78rem; }
-
-      /* Section padding lebih kecil */
-      .about-section { padding: 50px 16px; }
       .products-section { padding: 50px 0; }
-
-      /* Heading lebih kecil lagi */
       h2 { font-size: 1.5rem !important; }
     }
 

@@ -1,13 +1,18 @@
 // ================================================================
     // SCROLL REVEAL (Intersection Observer)
     // ================================================================
+    const isMobileDevice = window.innerWidth <= 768;
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, {
+      threshold: isMobileDevice ? 0.02 : 0.1,
+      rootMargin: isMobileDevice ? '0px' : '0px 0px -50px 0px'
+    });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     // Stagger product cards
     const productGrid = document.getElementById('productGrid');
