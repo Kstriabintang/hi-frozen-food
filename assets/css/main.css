@@ -47,10 +47,7 @@
       color: var(--white);
       line-height: 1.6;
       overflow-x: hidden;
-      opacity: 0;
-      transition: opacity 0.5s ease;
     }
-    body.loaded { opacity: 1; }
 
     .gradient-text {
       background: var(--gradient-text);
