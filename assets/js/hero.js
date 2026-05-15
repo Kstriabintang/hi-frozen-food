@@ -102,3 +102,52 @@
       });
     }, { threshold: 0.5 });
     document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+
+// ================================================================
+    // SNOW CANVAS
+    // ================================================================
+    (function() {
+      const canvas = document.getElementById('snowCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let flakes = [];
+      const COUNT = 60;
+
+      function resize() {
+        canvas.width  = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      for (let i = 0; i < COUNT; i++) {
+        flakes.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 2.5 + 0.5,
+          speed: Math.random() * 0.8 + 0.3,
+          opacity: Math.random() * 0.4 + 0.1,
+          drift: Math.random() * 0.4 - 0.2
+        });
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        flakes.forEach(f => {
+          ctx.beginPath();
+          ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(255,255,255,' + f.opacity + ')';
+          ctx.fill();
+          f.y += f.speed;
+          f.x += f.drift;
+          if (f.y > canvas.height) {
+            f.y = -f.r;
+            f.x = Math.random() * canvas.width;
+          }
+          if (f.x > canvas.width) f.x = 0;
+          if (f.x < 0) f.x = canvas.width;
+        });
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
