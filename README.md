@@ -1,17 +1,32 @@
 # Hi Frozen Food
 
-Website landing page Hi Frozen Food Pontianak.
-Frozen food premium untuk keluarga Pontianak.
+A modern, responsive landing page for a frozen food
+business. Built with pure HTML, CSS, and Vanilla JS —
+no frameworks, no dependencies.
+
+## Features
+
+- Responsive design (mobile & desktop)
+- Smooth scroll animations & parallax effects
+- Interactive product catalog with category filter
+- Horizontal scroll product cards
+- WhatsApp order integration
+- QRIS payment flow
+- Testimonial carousel
+- Google Maps integration
+- Performance optimized (lazy loading, preconnect)
 
 ## Tech Stack
 
-HTML · CSS · Vanilla JS
+- HTML5
+- CSS3 (custom properties, flexbox, grid)
+- Vanilla JavaScript (Intersection Observer,
+  requestAnimationFrame)
 
 ## Live Demo
 
-https://[username].github.io/hi-frozen-food
+https://Kstriabintang.github.io/hi-frozen-food
 
-## Kontak
+## License
 
-WhatsApp: +62 852-4558-5908
-Lokasi: Sui Jawi, Gg. Lawu, Pontianak Barat
+MIT
