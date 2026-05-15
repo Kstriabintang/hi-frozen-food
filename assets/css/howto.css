@@ -1,0 +1,69 @@
+/* ================================================================
+       CARA ORDER
+       ================================================================ */
+    .order-section { padding: 80px 20px; background: var(--bg-stats); }
+    .order-section .container { max-width: 1100px; margin: 0 auto; }
+    .order-section .section-header { text-align: center; margin-bottom: 60px; }
+    .order-section h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .order-timeline {
+      display: flex;
+      gap: 20px;
+      position: relative;
+    }
+    .order-timeline::before {
+      content: '';
+      position: absolute;
+      top: 30px; left: 60px; right: 60px;
+      height: 2px;
+      border-top: 2px dashed rgba(255,214,0,0.3);
+      z-index: 0;
+    }
+    .order-step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .order-step-num {
+      width: 60px; height: 60px;
+      border: 2px solid var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0 auto 20px;
+      background: var(--bg-body);
+      box-shadow: 0 0 15px rgba(255,214,0,0.2);
+    }
+    .order-step-card {
+      background: rgba(255,214,0,0.05);
+      backdrop-filter: blur(10px);
+      border: var(--border-glass);
+      border-radius: var(--radius);
+      padding: 24px 16px;
+    }
+    .order-step-card .icon {
+      font-size: 2rem; margin-bottom: 12px; display: block;
+      animation: iconBounce 2s ease-in-out infinite;
+    }
+    @keyframes iconBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    .order-step-card h4 { font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 8px; }
+    .order-step-card p { color: var(--text-muted); font-size: 0.9rem; }
+    .order-timeline .order-step:nth-child(2) { transition-delay: 0.1s; }
+    .order-timeline .order-step:nth-child(3) { transition-delay: 0.2s; }
+    .order-timeline .order-step:nth-child(4) { transition-delay: 0.3s; }
