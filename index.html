@@ -33,10 +33,14 @@
   (async () => {
     const sections = ['navbar','hero','stats','about','products','howto','testimonial','contact','footer'];
     for (const s of sections) {
-      const html = await fetch('includes/' + s + '.html').then(r => r.text());
-      const t = document.createElement('template');
-      t.innerHTML = html;
-      document.body.append(...Array.from(t.content.childNodes));
+      try {
+        const html = await fetch('includes/' + s + '.html').then(r => r.text());
+        const t = document.createElement('template');
+        t.innerHTML = html;
+        document.body.append(...Array.from(t.content.childNodes));
+      } catch(e) {
+        console.error('Gagal load section:', s, e);
+      }
     }
     // Load scripts setelah semua section sudah ada di DOM
     ['animations','navbar','hero','products','testimonial'].forEach(name => {
@@ -44,6 +48,8 @@
       el.src = 'assets/js/' + name + '.js';
       document.body.appendChild(el);
     });
+    // Fallback: pastikan body selalu tampil meski hero.js gagal
+    setTimeout(() => document.body.classList.add('loaded'), 2500);
   })();
   </script>
 
