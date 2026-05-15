@@ -107,6 +107,12 @@
     .hamburger.active span:nth-child(2) { opacity: 0; }
     .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
+    @media (max-width: 768px) {
+      .nav-logo img { width: 28px; height: 28px; }
+      .nav-logo-text { font-size: 0.85rem; }
+      .navbar .container { padding: 0 16px; }
+    }
+
     /* Mobile Menu */
     .mobile-menu {
       position: fixed;
