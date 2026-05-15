@@ -27,16 +27,17 @@
       justify-content: space-between;
     }
     .nav-logo {
-      font-family: var(--font-heading);
-      font-size: 1.4rem;
-      font-weight: 700;
-      background: var(--gradient-text);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      display: flex;
+      align-items: center;
+      gap: 10px;
       text-decoration: none;
     }
-    .nav-logo img { height: 40px; object-fit: contain; }
+    .nav-logo img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
     .nav-logo-text {
       font-family: var(--font-heading);
       font-size: 1.1rem;
@@ -44,6 +45,7 @@
       color: var(--primary);
       letter-spacing: 0.5px;
       white-space: nowrap;
+      line-height: 1;
     }
     .nav-menu {
       display: flex;
