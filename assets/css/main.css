@@ -150,6 +150,20 @@
       .product-price { font-size: 12px; }
       .product-btn { font-size: 11px; height: 30px; padding: 6px; }
       .filter-tabs { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px; }
+
+      /* Buttons CTA */
+      .btn-primary, .btn-secondary {
+        white-space: nowrap;
+        font-size: 0.95rem;
+        padding: 14px 24px;
+        width: auto;
+        max-width: 90%;
+      }
+      .about-content .btn-primary {
+        white-space: nowrap;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+      }
     }
 
     @media (max-width: 480px) {

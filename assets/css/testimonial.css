@@ -93,3 +93,11 @@
     .testi-avatar-4 { background: linear-gradient(135deg, #FFD600, #2E7D32); }
     .testi-avatar-5 { background: linear-gradient(135deg, #2E7D32, #FF6B00); }
     .testi-avatar-6 { background: linear-gradient(135deg, #FF6B00, #2E7D32); }
+
+    @media (max-width: 768px) {
+      .testi-section { padding: 60px 16px; }
+      .testi-carousel { overflow: hidden; max-width: 100%; }
+      .testi-track { overflow: hidden; }
+      .testi-card { flex: 0 0 100%; max-width: 100%; padding: 8px 0; }
+      .testi-card-inner { padding: 20px 16px; }
+    }
