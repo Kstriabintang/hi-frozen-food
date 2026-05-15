@@ -136,6 +136,14 @@
       /* ── Testimonial ────────────────────────────────────────── */
       .testi-card { flex: 0 0 100%; }
 
+      /* ── Produk marquee: percepat di mobile ────────────────── */
+      .marquee-row--left { animation-duration: 20s !important; }
+      .marquee-row--right { animation-duration: 20s !important; }
+      .products-section * {
+        animation-delay: 0s !important;
+        transition-delay: 0s !important;
+      }
+
       /* ── Animasi: matikan di mobile ─────────────────────────── */
       .reveal {
         opacity: 1 !important;

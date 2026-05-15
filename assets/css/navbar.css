@@ -108,8 +108,19 @@
     .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
     @media (max-width: 768px) {
-      .nav-logo img { width: 28px; height: 28px; }
-      .nav-logo-text { display: none; }
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .nav-logo img { width: 32px; height: 32px; }
+      .nav-logo-text {
+        display: block;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--primary);
+        white-space: nowrap;
+      }
       .nav-menu { display: none; }
       .nav-cta { display: none; }
       .hamburger { display: flex; }
