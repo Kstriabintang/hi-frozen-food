@@ -4,9 +4,9 @@
     .hero {
       min-height: 100vh;
       background-color: var(--bg-hero);
-      background-image: url('../images/location/closeup_papan_nama_dari_bawah.png');
+      background-image: url('../images/location/closeup_papan_nama_dari_bawah-landscape.png');
       background-size: cover;
-      background-position: center center;
+      background-position: center;
       background-repeat: no-repeat;
       display: flex;
       flex-direction: column;
