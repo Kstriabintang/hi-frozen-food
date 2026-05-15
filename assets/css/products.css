@@ -172,30 +172,72 @@
     }
     .product-btn:hover { box-shadow: var(--shadow-glow); transform: scale(1.02); }
 
-    /* Product Navigation Arrows */
-    .product-nav {
+    /* ================================================================
+           MARQUEE PRODUK
+           ================================================================ */
+    .marquee-wrapper {
+      overflow: hidden;
+      padding: 20px 0;
       display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 20px;
+      flex-direction: column;
+      gap: 20px;
     }
-    .product-nav-btn {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,214,0,0.3);
-      background: rgba(255,214,0,0.08);
-      color: var(--primary);
-      font-size: 1.2rem;
-      cursor: pointer;
+    .marquee-row {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: var(--transition);
+      gap: 20px;
+      width: max-content;
     }
-    .product-nav-btn:hover {
-      background: var(--gradient-btn);
-      color: #000;
-      border-color: transparent;
-      transform: scale(1.1);
+    .marquee-row--left {
+      animation: marquee-left 40s linear infinite;
+    }
+    .marquee-row--right {
+      animation: marquee-right 40s linear infinite;
+    }
+    @keyframes marquee-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes marquee-right {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+    .marquee-row:hover {
+      animation-play-state: paused;
+    }
+    .product-card-mini {
+      flex-shrink: 0;
+      width: 200px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,214,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .product-card-mini:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(245,166,35,0.2);
+    }
+    .product-card-mini img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .product-card-mini-info {
+      padding: 10px 12px;
+    }
+    .product-card-mini-name {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .product-card-mini-price {
+      display: block;
+      font-size: 13px;
+      color: #F5A623;
+      font-weight: 700;
+      margin-top: 4px;
     }
