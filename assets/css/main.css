@@ -151,6 +151,13 @@
       .product-btn { font-size: 11px; height: 30px; padding: 6px; }
       .filter-tabs { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px; }
 
+      /* Produk — kurangi animasi di mobile */
+      .product-card { transition: transform 0.2s ease; }
+      .product-card:hover { transform: none; }
+      .product-card-mini { transition: transform 0.2s ease; }
+      .product-card-mini:hover { transform: none; box-shadow: none; }
+      .reveal { transition: opacity 0.4s ease, transform 0.4s ease; }
+
       /* Buttons CTA */
       .btn-primary, .btn-secondary {
         white-space: nowrap;

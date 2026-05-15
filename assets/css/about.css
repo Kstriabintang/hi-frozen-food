@@ -119,9 +119,10 @@
     @media (max-width: 768px) {
       .about-section { padding: 60px 16px; }
       .about-section .container { gap: 32px; }
-      .about-section h2 { font-size: 1.5rem !important; line-height: 1.3; }
-      .about-section p { font-size: 0.9rem; line-height: 1.6; }
-      .about-content { width: 100%; padding: 0 8px; }
+      .about-content { width: 100%; padding: 0 8px; text-align: left; }
+      .about-section .section-label { text-align: left; }
+      .about-section h2 { font-size: 1.4rem !important; line-height: 1.3; text-align: left; }
+      .about-section p { font-size: 0.9rem; line-height: 1.6; text-align: left; }
       .about-features { gap: 16px; }
       .about-feature {
         flex-direction: row;
