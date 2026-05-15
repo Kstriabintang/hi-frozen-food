@@ -117,23 +117,84 @@
     .about-feature p { color: var(--text-muted); font-size: 0.9rem; margin: 0; }
 
     @media (max-width: 768px) {
-      .about-section { padding: 60px 16px; }
-      .about-section .container { gap: 32px; }
-      .about-content { width: 100%; padding: 0 8px; text-align: left; }
-      .about-section .section-label { text-align: left; }
-      .about-section h2 { font-size: 1.4rem !important; line-height: 1.3; text-align: left; }
-      .about-section p { font-size: 0.9rem; line-height: 1.6; text-align: left; }
-      .about-features { gap: 16px; }
+      .about-section {
+        padding: 48px 20px;
+      }
+      .about-section .container {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+      .about-visual {
+        display: none;
+      }
+      .about-content {
+        width: 100%;
+        padding: 0;
+        text-align: left;
+      }
+      .about-content .section-label,
+      .about-content .section-tag {
+        text-align: left;
+        display: block;
+      }
+      .about-content h2 {
+        font-size: 1.45rem !important;
+        line-height: 1.35 !important;
+        text-align: left !important;
+        margin-bottom: 12px;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        hyphens: none;
+      }
+      .about-content p {
+        font-size: 0.88rem;
+        line-height: 1.65;
+        text-align: left;
+        color: var(--text-muted);
+      }
+      .about-features {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 20px;
+      }
       .about-feature {
+        display: flex;
         flex-direction: row;
-        gap: 12px;
         align-items: flex-start;
+        gap: 14px;
         width: 100%;
       }
-      .about-feature > div:last-child { flex: 1; min-width: 0; }
-      .about-feature-icon { width: 42px; height: 42px; font-size: 1.4rem; flex-shrink: 0; }
-      .about-feature h4 { font-size: 0.9rem; margin-bottom: 2px; }
-      .about-feature p { font-size: 0.82rem; word-break: normal; overflow-wrap: break-word; }
+      .about-feature-icon {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        font-size: 1.3rem;
+        flex-shrink: 0;
+      }
+      .about-feature > div:last-child {
+        flex: 1;
+        min-width: 0;
+      }
+      .about-feature h4 {
+        font-size: 0.92rem;
+        font-weight: 600;
+        margin-bottom: 3px;
+        line-height: 1.3;
+      }
+      .about-feature p {
+        font-size: 0.82rem;
+        line-height: 1.5;
+        margin: 0;
+      }
+      .about-content .btn-primary {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        padding: 12px 22px;
+        white-space: nowrap;
+        display: inline-flex;
+      }
       .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
     }
 

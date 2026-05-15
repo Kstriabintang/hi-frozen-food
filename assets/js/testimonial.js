@@ -21,27 +21,63 @@
 
       function isMobile() { return window.innerWidth <= 768; }
 
-      // ── Mobile stack: semua card vertikal, no carousel ──────────
+      // ── Mobile stack: 3 card pertama, sisanya tersembunyi ───────
       function setupMobileStack() {
         clearInterval(autoplayInterval);
         track.style.flexDirection = 'column';
         track.style.transform = 'none';
         track.style.transition = 'none';
-        cards.forEach(c => {
+        testiNav.style.display = 'none';
+
+        cards.forEach((c, i) => {
           c.style.flex = '1 1 100%';
           c.style.maxWidth = '100%';
+          c.style.display = i < 3 ? '' : 'none';
         });
-        testiNav.style.display = 'none';
+
+        // Hapus tombol lama jika ada
+        const oldBtn = document.getElementById('testi-show-all');
+        if (oldBtn) oldBtn.remove();
+
+        // Tambah tombol "Lihat Semua" jika card > 3
+        if (cards.length > 3) {
+          const showAllBtn = document.createElement('button');
+          showAllBtn.id = 'testi-show-all';
+          showAllBtn.textContent = 'Lihat Semua Testimoni';
+          showAllBtn.style.cssText = [
+            'display:block',
+            'margin:16px auto 0',
+            'padding:10px 24px',
+            'background:transparent',
+            'border:2px solid var(--primary)',
+            'color:var(--primary)',
+            'border-radius:50px',
+            'font-size:0.9rem',
+            'font-weight:600',
+            'cursor:pointer',
+            'font-family:var(--font-body)',
+          ].join(';');
+          showAllBtn.addEventListener('click', function() {
+            cards.forEach(c => { c.style.display = ''; });
+            this.remove();
+          });
+          track.parentNode.insertBefore(showAllBtn, track.nextSibling);
+        }
       }
 
       // ── Desktop carousel: reset ke mode normal ──────────────────
       function setupDesktopCarousel() {
+        // Hapus tombol mobile jika ada
+        const oldBtn = document.getElementById('testi-show-all');
+        if (oldBtn) oldBtn.remove();
+
         track.style.flexDirection = '';
         track.style.transform = '';
         track.style.transition = '';
         cards.forEach(c => {
           c.style.flex = '';
           c.style.maxWidth = '';
+          c.style.display = '';
         });
         testiNav.style.display = '';
         slidesPerView = getSlidesPerView();
