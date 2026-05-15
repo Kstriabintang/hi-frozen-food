@@ -69,32 +69,7 @@
     }
     .footer-bottom p { color: var(--text-muted); font-size: 0.85rem; }
 
-    @media (max-width: 768px) {
-      .footer { padding: 48px 20px 24px; }
-      .footer-grid { gap: 28px; }
-
-      /* Kolom pertama: brand + tagline rata tengah */
-      .footer-grid > div:first-child { text-align: center; }
-      .footer-brand { text-align: center; width: 100%; }
-      .footer-brand img { display: block; margin: 0 auto 8px; }
-      .footer-tagline { text-align: center; width: 100%; }
-
-      /* Footer bottom: stack vertikal */
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 6px;
-      }
-
-      /* Sembunyikan elemen dekorasi bulat/blob */
-      .footer-blob, .footer-decor,
-      [class*="blob"], [class*="decor"] {
-        display: none !important;
-      }
-
-      /* Float-top: sesuaikan posisi agar tidak tumpang tindih */
-      .float-top { bottom: 20px; right: 20px; }
-    }
+    /* Mobile footer: lihat assets/css/mobile.css */
 
 /* ================================================================
        FLOATING BUTTONS

@@ -1,0 +1,253 @@
+/* ================================================================
+   MOBILE.CSS — Semua style khusus mobile di sini
+   Berlaku untuk: max-width 768px (dan 480px untuk layar kecil)
+   Desktop tidak tersentuh sama sekali oleh file ini.
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   GLOBAL MOBILE
+   ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+  *, *::before, *::after { box-sizing: border-box; }
+  section { overflow-x: hidden; width: 100%; }
+  .container { padding-left: 16px !important; padding-right: 16px !important; }
+
+  /* Heading global */
+  h1 { font-size: clamp(1.8rem, 6vw, 2.4rem) !important; }
+  h2 { font-size: clamp(1.6rem, 5vw, 2rem) !important; }
+
+  /* Buttons */
+  .btn-primary, .btn-secondary {
+    white-space: nowrap;
+    font-size: 0.95rem;
+    padding: 14px 24px;
+    width: auto;
+    max-width: 90%;
+  }
+
+  /* Animasi berat: matikan di mobile */
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .product-card { transition: none !important; will-change: auto !important; }
+  .product-card:hover { transform: none; }
+  .product-card-mini { transition: none !important; }
+  .product-card-mini:hover { transform: none; box-shadow: none; }
+
+  /* Sembunyikan desktop-only */
+  .mobile-hidden { display: none !important; }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu { display: none !important; }
+  .mobile-only { display: none !important; }
+}
+
+/* ----------------------------------------------------------------
+   NAVBAR MOBILE
+   ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nav-logo img { width: 32px; height: 32px; }
+  .nav-logo-text {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary);
+    white-space: nowrap;
+  }
+  .nav-menu { display: none; }
+  .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .navbar .container { padding: 0 16px; }
+}
+
+/* ----------------------------------------------------------------
+   HERO MOBILE — gambar ringan dari folder mobile/
+   ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .hero {
+    background-image: url('../images/mobile/hero-bg.webp') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    width: 100%;
+    max-width: 100vw;
+    min-height: 100svh;
+    min-height: 100vh;
+    padding: 80px 16px 40px;
+    overflow: hidden;
+  }
+  .hero h1 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+  .hero-sub { font-size: 0.95rem; }
+  .hero-sub2 { font-size: 0.8rem; letter-spacing: 2px; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .snowflake-decor { width: 180px; height: 180px; }
+}
+
+/* ----------------------------------------------------------------
+   STATS MOBILE
+   ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .hero-stats { gap: 24px; }
+}
+
+@media (max-width: 480px) {
+  .stat-item .stat-number,
+  .hero-stat .hero-stat-number { font-size: 2rem; }
+  .stats-grid { gap: 12px; padding: 0 8px; }
+  .stat-item .stat-label { font-size: 0.78rem; }
+}
+
+/* ----------------------------------------------------------------
+   PRODUK MARQUEE MOBILE
+   Fix: row ke-2 tidak terlihat karena translateX(-50%) off-screen.
+   Di mobile pakai arah yang sama (kiri) agar selalu tampil.
+   ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .products-section { padding: 50px 0; }
+  .products-section h2 { font-size: 1.6rem !important; }
+
+  /* Pastikan wrapper tidak clip row secara vertikal */
+  .marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Kedua row: max-width none agar tidak terpotong */
+  .marquee-row,
+  .marquee-row--left,
+  .marquee-row--right {
+    max-width: none !important;
+    width: max-content !important;
+    flex-shrink: 0;
+  }
+
+  .product-card-mini {
+    max-width: 170px !important;
+    width: 170px !important;
+    flex-shrink: 0;
+  }
+
+  /* Row 2 di mobile: scroll kiri (sama seperti row 1) agar selalu visible.
+     translateX(-50%) di row kanan menyebabkan row mulai off-screen kiri. */
+  .marquee-row--right {
+    animation: marquee-left 22s linear infinite !important;
+  }
+
+  /* Kecepatan sedikit berbeda agar terasa dua jalur berbeda */
+  .marquee-row--left { animation-duration: 18s !important; }
+}
+
+@media (max-width: 480px) {
+  .product-card-mini {
+    max-width: 150px !important;
+    width: 150px !important;
+  }
+  .product-card-mini img { height: 130px; }
+}
+
+/* ----------------------------------------------------------------
+   ABOUT MOBILE
+   ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .about-section { padding: 48px 20px; }
+  .about-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .about-visual { display: none; }
+  .about-content {
+    width: 100%;
+    padding: 0;
+    text-align: left;
+  }
+  .about-content .section-label,
+  .about-content .section-tag { text-align: left; display: block; }
+  .about-content h2 {
+    font-size: 1.45rem !important;
+    line-height: 1.35 !important;
+    text-align: left !important;
+    margin-bottom: 12px;
+    word-break: keep-all;
+  }
+  .about-content p {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    text-align: left;
+    color: var(--text-muted);
+  }
+  .about-features { display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
+  .about-feature {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 14px;
+    width: 100%;
+  }
+  .about-feature-icon {
+    width: 44px; height: 44px; min-width: 44px;
+    font-size: 1.3rem; flex-shrink: 0;
+  }
+  .about-feature > div:last-child { flex: 1; min-width: 0; }
+  .about-feature h4 { font-size: 0.92rem; font-weight: 600; margin-bottom: 3px; }
+  .about-feature p { font-size: 0.82rem; line-height: 1.5; margin: 0; }
+  .about-content .btn-primary {
+    margin-top: 20px; font-size: 0.9rem; padding: 12px 22px;
+    white-space: nowrap; display: inline-flex;
+  }
+}
+
+/* ----------------------------------------------------------------
+   HOW TO ORDER MOBILE
+   ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .order-timeline { flex-direction: column; }
+  .order-timeline::before { display: none; }
+}
+
+/* ----------------------------------------------------------------
+   TESTIMONIAL MOBILE
+   ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .testi-section { padding: 60px 16px; }
+  .testi-carousel { overflow: hidden; max-width: 100%; }
+  .testi-track { overflow: hidden; }
+  .testi-card { flex: 0 0 100%; max-width: 100%; padding: 8px 0; }
+  .testi-card-inner { padding: 20px 16px; }
+}
+
+/* ----------------------------------------------------------------
+   CONTACT MOBILE
+   ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .contact-section .container { grid-template-columns: 1fr; }
+}
+
+/* ----------------------------------------------------------------
+   FOOTER MOBILE
+   ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .footer { padding: 48px 20px 24px; }
+  .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 28px; }
+  .footer-grid > div:first-child { text-align: center; }
+  .footer-brand { text-align: center; width: 100%; }
+  .footer-brand img { display: block; margin: 0 auto 8px; }
+  .footer-tagline { text-align: center; width: 100%; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 6px; }
+  .footer-social { justify-content: center; }
+  .footer-blob, .footer-decor,
+  [class*="blob"], [class*="decor"] { display: none !important; }
+  .float-top { bottom: 20px; right: 20px; }
+}
